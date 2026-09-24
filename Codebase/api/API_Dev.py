@@ -21,6 +21,7 @@ def read_csv_file(file_path):
         df=pd.read_csv(file_path)
         df = df.replace({np.nan: None})
         return df
+    
     except FileNotFoundError:
         print(f"File not found: {file_path}")
         return None

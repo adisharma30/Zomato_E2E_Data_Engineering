@@ -3,12 +3,16 @@ import numpy as np
 import requests
 from fastapi import FastAPI
 import os
+from pathlib import Path
+import pandas as pd
 
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = BASE_DIR / "data"
 
 app=FastAPI()
 
 dataframes={}
-base_path= 'C:/Users/91787/Python_Repo/Zomato_E2E_Data_Engineering/data'
+#base_path= 'C:/Users/91787/Python_Repo/Zomato_E2E_Data_Engineering/data'
 files=['food','menu','order_items','restaurant','users','reviews']
 
 def read_csv_file(file_path):
@@ -27,7 +31,7 @@ def read_csv_file(file_path):
         return None
 
 for file in files:
-    path=os.path.join(base_path,f"{file}.csv")
+    path=DATA_DIR / f"{file}.csv"
     dataframes[f'{file}_df']= read_csv_file(path)
 
 @app.get("/api/food/")
@@ -58,7 +62,7 @@ def get_order_items_data( page:int=1, limit:int=100):
     if order_items_df is not None:
         return order_items_df.iloc[start:end].to_dict(orient='records')
     else:
-        return None
+        return {"error": "File not found"}
 
 @app.get("/api/restaurant/")
 def get_restaurant_data(page: int = 1, limit: int = 100):

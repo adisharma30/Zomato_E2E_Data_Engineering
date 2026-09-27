@@ -4,11 +4,11 @@ import requests
 import json, time
 
 API_URL='https://zomato-e2e-data-engineering.onrender.com/api'
-categories = ['food','menu','order_items','restaurants', 'users', 'reviews']
+categories = ['order_items','restaurants', 'users', 'reviews']
 
 try:
     producer=KafkaProducer(bootstrap_servers='localhost:29092',
-                           value_serializer=lambda v: str(v).encode('utf-8'))
+                           value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 except Exception as e:
     print(f"Error connecting to Kafka: {e}")
     exit(1)

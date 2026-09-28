@@ -4,7 +4,7 @@ import requests
 import json, time
 
 API_URL='https://zomato-e2e-data-engineering.onrender.com/api'
-categories = ['order_items','restaurants', 'users', 'reviews']
+categories = ['restaurant']
 
 try:
     producer=KafkaProducer(bootstrap_servers='localhost:29092',
@@ -43,7 +43,7 @@ while True:
                 producer.send(f"{cat}-topic-zomato", value=resp)
                 print(f"Sent data for {cat}:{page}:{resp}", flush=True)
                 page+=1
-                time.sleep(2)
+                time.sleep(1)
             
 
 

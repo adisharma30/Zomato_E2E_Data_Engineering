@@ -15,7 +15,7 @@ except Exception as e:
 
 print("Producer started successfully!", flush=True)
 
-def fetch_data_zomato(category,page,limit=1000):
+def fetch_data_zomato(category,page,limit=100):
     url=f'{API_URL}/{category}/'
     query_paramaters={"page":page,
                           "limit":limit}
@@ -36,7 +36,7 @@ while True:
         page=1
         print(f"Fetching data for {cat}")
         while True:
-            resp=fetch_data_zomato(cat,page,limit=1000)
+            resp=fetch_data_zomato(cat,page,limit=100)
             if not resp or not resp.get('data'):
                 break
             if resp:

@@ -1,0 +1,53 @@
+[2026-10-16T10:53:10.179+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-10-16T10:53:10.356+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_employees_table_dag.get_data scheduled__2026-10-15T00:00:00+00:00 [queued]>
+[2026-10-16T10:53:10.381+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_employees_table_dag.get_data scheduled__2026-10-15T00:00:00+00:00 [queued]>
+[2026-10-16T10:53:10.384+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-10-16T10:53:10.433+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): get_data> on 2026-10-15 00:00:00+00:00
+[2026-10-16T10:53:10.461+0000] {standard_task_runner.py:64} INFO - Started process 8440 to run task
+[2026-10-16T10:53:10.486+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'create_employees_table_dag', 'get_data', 'scheduled__2026-10-15T00:00:00+00:00', '--job-id', '1206', '--raw', '--subdir', 'DAGS_FOLDER/01_sql_table_creation.py', '--cfg-path', '/tmp/tmpwew2nacs']
+[2026-10-16T10:53:10.519+0000] {standard_task_runner.py:91} INFO - Job 1206: Subtask get_data
+[2026-10-16T10:53:10.824+0000] {task_command.py:426} INFO - Running <TaskInstance: create_employees_table_dag.get_data scheduled__2026-10-15T00:00:00+00:00 [running]> on host 3e9667df90f0
+[2026-10-16T10:53:12.158+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_employees_table_dag' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2026-10-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-10-15T00:00:00+00:00'
+[2026-10-16T10:53:12.165+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-10-16T10:53:13.063+0000] {postgres.py:189} INFO - Running copy expert: COPY temp_employees FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE AS '"', filename: /opt/***/dags/files/employees.csv
+[2026-10-16T10:53:13.273+0000] {base.py:84} INFO - Using connection ID 'tutorial_pg_conn' for task execution.
+[2026-10-16T10:53:13.523+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-10-16T10:53:13.530+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 265, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/01_sql_table_creation.py", line 50, in get_data
+    postreshook.copy_expert("COPY temp_employees FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE AS '\"'", path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/postgres/hooks/postgres.py", line 195, in copy_expert
+    cur.copy_expert(sql, file)
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "temp_employees_pkey"
+DETAIL:  Key ("Serial Number")=(2) already exists.
+CONTEXT:  COPY temp_employees, line 2
+
+[2026-10-16T10:53:13.652+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=create_employees_table_dag, task_id=get_data, run_id=scheduled__2026-10-15T00:00:00+00:00, execution_date=20261015T000000, start_date=20261016T105310, end_date=20261016T105313
+[2026-10-16T10:53:13.811+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 1206 for task get_data (duplicate key value violates unique constraint "temp_employees_pkey"
+DETAIL:  Key ("Serial Number")=(2) already exists.
+CONTEXT:  COPY temp_employees, line 2
+; 8440)
+[2026-10-16T10:53:13.870+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-10-16T10:53:14.001+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-10-16T10:53:14.053+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

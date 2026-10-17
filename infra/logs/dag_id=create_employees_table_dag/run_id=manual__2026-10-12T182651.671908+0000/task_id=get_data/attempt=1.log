@@ -1,0 +1,19 @@
+[2026-10-12T18:27:25.874+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-10-12T18:27:25.945+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: create_employees_table_dag.get_data manual__2026-10-12T18:26:51.671908+00:00 [queued]>
+[2026-10-12T18:27:25.965+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: create_employees_table_dag.get_data manual__2026-10-12T18:26:51.671908+00:00 [queued]>
+[2026-10-12T18:27:25.968+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-10-12T18:27:25.998+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): get_data> on 2026-10-12 18:26:51.671908+00:00
+[2026-10-12T18:27:26.012+0000] {standard_task_runner.py:64} INFO - Started process 1141 to run task
+[2026-10-12T18:27:26.021+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'create_employees_table_dag', 'get_data', 'manual__2026-10-12T18:26:51.671908+00:00', '--job-id', '1194', '--raw', '--subdir', 'DAGS_FOLDER/01_sql_table_creation.py', '--cfg-path', '/tmp/tmpe1w4n9bm']
+[2026-10-12T18:27:26.026+0000] {standard_task_runner.py:91} INFO - Job 1194: Subtask get_data
+[2026-10-12T18:27:26.135+0000] {task_command.py:426} INFO - Running <TaskInstance: create_employees_table_dag.get_data manual__2026-10-12T18:26:51.671908+00:00 [running]> on host 3e9667df90f0
+[2026-10-12T18:27:27.246+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='create_employees_table_dag' AIRFLOW_CTX_TASK_ID='get_data' AIRFLOW_CTX_EXECUTION_DATE='2026-10-12T18:26:51.671908+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-10-12T18:26:51.671908+00:00'
+[2026-10-12T18:27:27.248+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-10-12T18:27:29.409+0000] {postgres.py:189} INFO - Running copy expert: COPY temp_employees FROM STDIN WITH CSV HEADER DELIMITER AS ',' QUOTE AS '"', filename: /opt/***/dags/files/employees.csv
+[2026-10-12T18:27:29.553+0000] {base.py:84} INFO - Using connection ID 'tutorial_pg_conn' for task execution.
+[2026-10-12T18:27:29.641+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-10-12T18:27:29.645+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-10-12T18:27:29.690+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=create_employees_table_dag, task_id=get_data, run_id=manual__2026-10-12T18:26:51.671908+00:00, execution_date=20261012T182651, start_date=20261012T182725, end_date=20261012T182729
+[2026-10-12T18:27:29.761+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-10-12T18:27:29.815+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-10-12T18:27:29.819+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

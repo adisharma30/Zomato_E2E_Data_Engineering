@@ -85,10 +85,19 @@ SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER", "ADISHARMA")
 SNOWFLAKE_ACCOUNT = os.getenv(
     "SNOWFLAKE_ACCOUNT", "oc33285.eu-central-1"
 )
-SNOWFLAKE_PRIVATE_KEY_PATH = os.getenv(
-    "SNOWFLAKE_PRIVATE_KEY_PATH",
-    "/opt/airflow/secrets/rsa_key.p8"
+
+repo_secret_key = (
+    Path(__file__).resolve().parent.parent / "secrets" / "rsa_key.p8"
 )
+if os.getenv("SNOWFLAKE_PRIVATE_KEY_PATH"):
+    SNOWFLAKE_PRIVATE_KEY_PATH = os.getenv("SNOWFLAKE_PRIVATE_KEY_PATH")
+elif repo_secret_key.is_file():
+    SNOWFLAKE_PRIVATE_KEY_PATH = str(repo_secret_key)
+elif Path("/opt/airflow/secrets/rsa_key.p8").is_file():
+    SNOWFLAKE_PRIVATE_KEY_PATH = "/opt/airflow/secrets/rsa_key.p8"
+else:
+    SNOWFLAKE_PRIVATE_KEY_PATH = "/opt/airflow/secrets/rsa_key.p8"
+
 SNOWFLAKE_PRIVATE_KEY_PASSWORD = os.getenv(
     "SNOWFLAKE_PRIVATE_KEY_PASSWORD"
 )
@@ -163,6 +172,8 @@ def download_from_minio(s3):
             logger.info("Downloading MinIO object: %s", key)
 
             try:
+                # Windows os.rename fails when the destination already exists.
+                local_file.unlink(missing_ok=True)
                 s3.download_file(
                     BUCKET, key, str(local_file)
                 )
@@ -294,12 +305,9 @@ def main():
         logger.info("Connecting to MinIO...")
         s3 = create_minio_client()
 
-        # Check bucket access before downloading.
         s3.head_bucket(Bucket=BUCKET)
         logger.info("MinIO bucket access verified.")
-
         downloaded_files = download_from_minio(s3)
-
         if not downloaded_files:
             logger.warning(
                 "No files found in bucket %s. Nothing to upload.",
@@ -335,3 +343,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

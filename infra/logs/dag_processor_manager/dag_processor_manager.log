@@ -72961,3 +72961,9 @@ File Path                                   PID    Runtime      # DAGs    # Erro
 [2026-10-23T01:17:52.324+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags
 [2026-10-23T01:22:52.826+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
 [2026-10-23T01:22:53.088+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags
+[2026-10-23T01:27:53.784+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-10-23T01:27:54.167+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags
+[2026-10-23T01:32:54.302+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-10-23T01:32:54.639+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags
+[2026-10-23T01:37:55.104+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-10-23T01:37:55.492+0000] {manager.py:740} INFO - There are 0 files in /opt/airflow/dags

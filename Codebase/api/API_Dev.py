@@ -58,7 +58,7 @@ def get_paginated_data(
                 errors="ignore"
             )
 
-        target_chunk = target_chunk.where(
+        target_chunk = target_chunk.astype(object).where(
             pd.notnull(target_chunk),
             None
         )

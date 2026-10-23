@@ -8,3 +8,4 @@ quantity :: number as quantity,
 line_amount :: decimal as line_amount
 from {{ source('raw','order_items')}}
 where try_to_number(order_item_id) is not null
+

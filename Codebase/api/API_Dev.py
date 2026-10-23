@@ -147,3 +147,14 @@ def get_reviews_data(
         page,
         limit
     )
+
+@app.get("/api/orders/")
+def get_orders_data(
+    page: int = Query(1, ge=1),
+    limit: int = Query(100, ge=1, le=1000)
+):
+    return get_paginated_data(
+        "orders",
+        page,
+        limit
+    )

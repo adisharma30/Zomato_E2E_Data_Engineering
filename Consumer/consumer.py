@@ -13,8 +13,8 @@ s3_client=boto3.client(
     aws_secret_access_key='password123'
 )
 
-#bucket_names=['food-topic-zomato','menu-topic-zomato','order_items-topic-zomato','restaurants-topic-zomato', 'users-topic-zomato', 'reviews-topic-zomato']
-bucket_names=['restaurant-topic-zomato']
+bucket_names=['food-topic-zomato','menu-topic-zomato','order_items-topic-zomato','restaurants-topic-zomato', 'users-topic-zomato', 'reviews-topic-zomato', 'orders-topic-zomato']
+#bucket_names=['restaurant-topic-zomato']
 
 Topic_to_folder={
     'food-topic-zomato':'food',
@@ -22,7 +22,8 @@ Topic_to_folder={
     'order_items-topic-zomato':'order_items',
     'restaurant-topic-zomato':'restaurant',
     'users-topic-zomato':'users',
-    'reviews-topic-zomato':'reviews'
+    'reviews-topic-zomato':'reviews',
+    'orders-topic-zomato':'orders'
 }
 
 
@@ -40,7 +41,7 @@ consumer=KafkaConsumer(*bucket_names,
                        auto_offset_reset='earliest',
                        enable_auto_commit=True,
                        value_deserializer=deserialize_message,
-                       group_id='my-zomato-consumer-group3')
+                       group_id='my-zomato-consumer-group4')
 
 print('Consumer streaming started! Waiting for Kafka messages...', flush=True)
 

@@ -1,0 +1,161 @@
+[2026-10-23T00:00:06.995+0000] {processor.py:161} INFO - Started process (PID=461) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:06.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:00:07.006+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:07.005+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:07.049+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:07.129+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:07.129+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:00:07.177+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:07.177+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:00:07.211+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.231 seconds
+[2026-10-23T00:00:37.459+0000] {processor.py:161} INFO - Started process (PID=462) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:37.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:00:37.476+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:37.475+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:37.526+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:00:37.628+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:37.628+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:00:37.660+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:00:37.659+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:00:37.685+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.259 seconds
+[2026-10-23T00:01:07.951+0000] {processor.py:161} INFO - Started process (PID=463) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:07.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:01:07.966+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:07.963+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:08.010+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:08.296+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:08.296+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:01:08.408+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:08.407+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:01:08.475+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.556 seconds
+[2026-10-23T00:01:38.728+0000] {processor.py:161} INFO - Started process (PID=464) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:38.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:01:38.734+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:38.733+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:38.785+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:01:38.844+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:38.844+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:01:38.883+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:01:38.883+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:01:38.908+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.195 seconds
+[2026-10-23T00:02:09.195+0000] {processor.py:161} INFO - Started process (PID=465) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:09.206+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:02:09.216+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:09.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:09.253+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:09.313+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:09.312+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:02:09.351+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:09.351+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:02:09.379+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.242 seconds
+[2026-10-23T00:02:39.779+0000] {processor.py:161} INFO - Started process (PID=466) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:39.784+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:02:39.795+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:39.794+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:39.854+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:02:39.944+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:39.944+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:02:40.005+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:02:40.005+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:02:40.048+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.288 seconds
+[2026-10-23T00:03:10.377+0000] {processor.py:161} INFO - Started process (PID=467) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:10.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:03:10.392+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:10.390+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:10.518+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:10.606+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:10.606+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:03:10.665+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:10.665+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:03:10.705+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.352 seconds
+[2026-10-23T00:03:41.078+0000] {processor.py:161} INFO - Started process (PID=468) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:41.080+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:03:41.084+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:41.084+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:41.149+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:03:41.258+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:41.257+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:03:41.361+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:03:41.360+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:03:41.466+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.398 seconds
+[2026-10-23T00:04:11.859+0000] {processor.py:161} INFO - Started process (PID=469) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:11.870+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:04:11.895+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:11.895+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:11.933+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:11.992+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:11.991+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:04:12.048+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:12.048+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:04:12.079+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.314 seconds
+[2026-10-23T00:04:42.356+0000] {processor.py:161} INFO - Started process (PID=470) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:42.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:04:42.365+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:42.363+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:42.507+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:04:42.674+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:42.674+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:04:42.755+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:04:42.754+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:04:42.803+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.466 seconds
+[2026-10-23T00:05:13.141+0000] {processor.py:161} INFO - Started process (PID=471) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:13.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:05:13.150+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:13.149+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:13.184+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:13.249+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:13.248+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:05:13.292+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:13.292+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:05:13.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.205 seconds
+[2026-10-23T00:05:43.487+0000] {processor.py:161} INFO - Started process (PID=472) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:43.494+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:05:43.499+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:43.498+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:43.584+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:05:43.664+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:43.663+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:05:43.720+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:05:43.720+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:05:43.765+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.311 seconds
+[2026-10-23T00:06:14.088+0000] {processor.py:161} INFO - Started process (PID=473) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:14.102+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:06:14.127+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:14.124+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:14.215+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:14.280+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:14.280+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:06:14.328+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:14.328+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:06:14.367+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.335 seconds
+[2026-10-23T00:06:44.628+0000] {processor.py:161} INFO - Started process (PID=474) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:44.630+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:06:44.634+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:44.634+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:44.677+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:06:44.744+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:44.744+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:06:44.796+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:06:44.796+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:06:44.833+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.216 seconds
+[2026-10-23T00:07:15.076+0000] {processor.py:161} INFO - Started process (PID=475) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:15.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:07:15.083+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:15.082+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:15.118+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:15.209+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:15.209+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:07:15.264+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:15.264+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:07:15.301+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.239 seconds
+[2026-10-23T00:07:45.593+0000] {processor.py:161} INFO - Started process (PID=476) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:45.600+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:07:45.611+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:45.610+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:45.713+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:07:45.839+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:45.839+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:07:45.934+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:07:45.933+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:07:46.002+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.449 seconds
+[2026-10-23T00:08:16.349+0000] {processor.py:161} INFO - Started process (PID=477) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:16.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:08:16.434+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:16.432+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:16.590+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:16.700+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:16.699+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:08:16.789+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:16.788+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:08:16.961+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.646 seconds
+[2026-10-23T00:08:47.126+0000] {processor.py:161} INFO - Started process (PID=478) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:47.145+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:08:47.162+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:47.161+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:47.256+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:08:47.337+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:47.337+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:08:47.387+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:08:47.387+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:08:47.421+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.361 seconds
+[2026-10-23T00:09:17.621+0000] {processor.py:161} INFO - Started process (PID=479) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:17.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:09:17.646+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:17.640+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:17.694+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:17.754+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:17.753+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:09:17.786+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:17.786+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:09:17.813+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.219 seconds
+[2026-10-23T00:09:48.103+0000] {processor.py:161} INFO - Started process (PID=480) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:48.111+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:09:48.123+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:48.122+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:48.199+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:09:48.272+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:48.272+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:09:48.304+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:09:48.303+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:09:48.336+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.274 seconds
+[2026-10-23T00:10:18.660+0000] {processor.py:161} INFO - Started process (PID=481) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:18.668+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:10:18.680+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:18.678+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:18.734+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:18.832+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:18.831+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:10:18.902+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:18.902+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:10:18.926+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.324 seconds
+[2026-10-23T00:10:49.208+0000] {processor.py:161} INFO - Started process (PID=482) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:49.211+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:10:49.216+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:49.216+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:49.259+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:10:49.336+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:49.335+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:10:49.379+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:10:49.379+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:10:49.416+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.216 seconds
+[2026-10-23T00:11:19.770+0000] {processor.py:161} INFO - Started process (PID=483) to work on /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:11:19.772+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/01_sql_table_creation.py for tasks to queue
+[2026-10-23T00:11:19.779+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:11:19.777+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:11:19.827+0000] {processor.py:840} INFO - DAG(s) 'create_employees_table_dag' retrieved from /opt/airflow/dags/01_sql_table_creation.py
+[2026-10-23T00:11:19.913+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:11:19.913+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-10-23T00:11:19.978+0000] {logging_mixin.py:188} INFO - [2026-10-23T00:11:19.978+0000] {dag.py:3947} INFO - Setting next_dagrun for create_employees_table_dag to 2026-10-22 00:00:00+00:00, run_after=2026-10-23 00:00:00+00:00
+[2026-10-23T00:11:20.024+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/01_sql_table_creation.py took 0.268 seconds

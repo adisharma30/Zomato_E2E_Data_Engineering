@@ -4,7 +4,7 @@ import requests
 import json, time
 
 API_URL='https://zomato-e2e-data-engineering.onrender.com/api'
-categories = ['restaurant']
+categories = ['restaurant', 'food', 'menu', 'order_items', 'users', 'reviews', 'orders']
 
 try:
     producer=KafkaProducer(bootstrap_servers='localhost:29092',

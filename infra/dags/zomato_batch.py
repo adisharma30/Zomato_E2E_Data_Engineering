@@ -3,4 +3,38 @@ from airflow import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 from airflow.providers.standard.operators.bash import BashOperator
 
-dag=
+
+COPY_RAW=[
+    "USE WAREHOUSE ZOMATO_WH",
+    "COPY INTO RAW.RESTAURANTS FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/restaurant ON_ERROR ='CONTINUE'",
+    "COPY INTO RAW.MENU FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/menu ON_ERROR ='CONTINUE'",
+    "COPY INTO RAW.ORDERS FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/orders ",
+    "COPY INTO RAW.FOOD FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/FOOD ON_ERROR ='CONTINUE'",
+    "COPY INTO RAW.USERS FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/users ON_ERROR ='CONTINUE'",
+    "COPY INTO RAW.ORDER_ITEMS FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/order_items ",
+    "COPY INTO RAW.REVIEWS FROM @ZOMATO.RAW.MINIO_ZOMATO_UPLOAD/reviews ",    
+
+]
+
+with DAG(
+    dag_id='zomato_batch',
+    start_date=datetime(2026, 10, 23),
+    schedule_interval='@daily',
+    catchup=False,
+    tags=['zomato','batch','dbt']
+
+) as dag:
+
+    reload_raw= SQLExecuteQueryOperator(
+        task_id='reload_raw',
+        conn_id='snowflake_adi',
+        sql=COPY_RAW,
+        split_statements=True,
+        autocommit= True,
+    )
+
+    dbt_buid= BashOperator(
+        task_id='dbt_build_run',
+        bash_command= 
+
+    )

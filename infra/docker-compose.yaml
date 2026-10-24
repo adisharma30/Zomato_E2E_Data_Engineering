@@ -52,13 +52,15 @@ services:
     command: server /data --console-address ":9001"
 
   airflow-webserver:
-    image: apache/airflow:2.9.3
+    image: zomato-airflow:2.9.3-dbt
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: airflow-webserver
     restart: always
     depends_on:
       - airflow-scheduler
       - postgres
-      - snowflake
     environment:
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
@@ -67,12 +69,16 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./secrets:/opt/airflow/secrets:ro
+      - ../dbt_zomato:/opt/airflow/dbt_zomato
     ports:
       - "8080:8080"
     command: webserver
 
   airflow-scheduler:
-    image: apache/airflow:2.9.3
+    image: zomato-airflow:2.9.3-dbt
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: airflow-scheduler
     restart: always
     depends_on:
@@ -85,6 +91,7 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./secrets:/opt/airflow/secrets:ro
+      - ../dbt_zomato:/opt/airflow/dbt_zomato
     command: scheduler
 
   postgres:
@@ -102,5 +109,3 @@ services:
 
 volumes:
   postgres_data:
-
-

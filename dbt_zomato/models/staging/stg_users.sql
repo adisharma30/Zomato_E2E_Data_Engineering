@@ -1,5 +1,5 @@
 select
-user_id::number as customer_id,
+user_id::varchar as customer_id,
 name as customer_name,
 email as customer_email,
 password as customer_password,

@@ -1,6 +1,6 @@
 select
-f_id :: number as food_id,
-item as food_name,
-initcap(trim(veg_or_non_veg)) as food_type
+f_id :: varchar as food_id,
+item as item_name,
+initcap(trim(veg_or_non_veg)) as veg_or_non_veg
 from {{source('raw','food')}}
-where try_to_number(f_id) is not null
+where f_id is not null

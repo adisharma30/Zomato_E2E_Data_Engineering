@@ -1,8 +1,11 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
-from airflow.providers.standard.operators.bash import BashOperator
+from airflow.operators.bash import BashOperator
 
+DBT_PROJECT= '/opt/airflow/dbt_zomato'
+DBT_PROFILES_DIR = '/opt/airflow/secrets'
+DBT= '/opt/dbt-venv/bin/dbt'
 
 COPY_RAW=[
     "USE WAREHOUSE ZOMATO_WH",
@@ -25,16 +28,21 @@ with DAG(
 
 ) as dag:
 
-    reload_raw= SQLExecuteQueryOperator(
-        task_id='reload_raw',
-        conn_id='snowflake_adi',
-        sql=COPY_RAW,
-        split_statements=True,
-        autocommit= True,
-    )
+    # reload_raw= SQLExecuteQueryOperator(
+    #     task_id='reload_raw',
+    #     conn_id='snowflake_adi',
+    #     sql=COPY_RAW,
+    #     split_statements=True,
+    #     autocommit= True,
+    # )
 
-    dbt_buid= BashOperator(
+    dbt_build= BashOperator(
         task_id='dbt_build_run',
-        bash_command= 
+        bash_command=(
+            f"{DBT} build --project-dir {DBT_PROJECT} "
+            f"--profiles-dir {DBT_PROFILES_DIR}"
+        )
 
     )
+
+    dbt_build

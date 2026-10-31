@@ -40,7 +40,7 @@ with DAG(
         task_id='dbt_build_run',
         bash_command=(
             f"{DBT} build --project-dir {DBT_PROJECT} "
-            f"--profiles-dir {DBT_PROFILES_DIR}"
+            f"--profiles-dir {DBT_PROFILES_DIR} --no-partial-parse"
         )
 
     )

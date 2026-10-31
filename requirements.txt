@@ -2,3 +2,6 @@ fastapi
 uvicorn
 pandas
 requests
+kafka-python
+boto3
+snowflake-connector-python
